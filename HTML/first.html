@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!-- Direction - by default ltr -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- metadata - (data about data) [For Browser] -->
+    <!-- 1.style 2.script 3.title  -->
+
+    <!-- Viewport meta tag -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complete HTML</title>
+    <meta name="description" content="This is complete HTML course" />
+    <meta name="keywords" content="web-devlopment, HTML"/>
+    <link rel="canonical" href="course.html"/>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Use online Favicon Generator tool (https://realfavicongenerator.net) -->
+    <link rel="icon" type="image/jpeg" href="./favicon.JPG">
+
+    <!-- Style in Head
+    <link rel="stylesheet" type="text/css" href="./first.css"> -->
+
+    <!-- Script and No-Script
+    <script src="./first.js"></script>
+    <noscript>Browser does not support Javascript</noscript> -->
+
+    <!-- Open Graph (Facebook) and Twitter Card (Twitter) tag
+    Open Graph:
+    <meta property="og:url"content="Page_address" />
+    <meta property="og:type"content="Page_type" />
+    <meta property="og:title"content="Title" />
+    <meta property="og:description"content="Description" />
+    <meta property="og:image"content="Image" />
+    Twitter Card:
+    <meta name="twitter:card" content="Summary" />
+    <meta name="twitter:site" content="@twitter_website_handle" />
+    <meta name="twitter:creator" content="@creators_handle" />
+    <meta property="og:url" content="Page_address" />
+    <meta property="og:title" content="Title" />
+    <meta property="og:description" content="Description" />
+    <meta property="og:image" content="Image" /> -->
+
+    <!-- Use W3C validator (online tool) can be used to find any dicrepencies of the code -->
+    
+  </head>
+  <body>
+    this is visible part [For User]
+
+    <!-- Element (Ex: Paragraph, link, image, video etc)
+    <TagName>Content...</TagName> 
+    (Ex: <p>This is p tag</p>)
+    some tags doesnt need closing tag as it contains its's content in itself
+    (Ex: img tag(<img src="" alt="">), br tag(<br>) etc) -->
+
+    <!-- Attribute (Ex: Additional information of an element)
+    <TagName attribute1="valve" attribute2="valve" ...>Content...</TagName>
+    Ex: <p width="100px">This is p tag</p> -->
+
+    <!-- Benefits of proper indentation
+    1) Proper Visualization of relationship(ie. parent child, sibling) of tags
+    2) Easy to visualize opening and closing of a tag 
+    3) Code looks professional -->
+
+    <!-- Heading: (for better SEO, user experience, presentation)
+    1) lower headings can be used for sub headings(ie. h2,h3,h4,h5,h6) to higherheadings (ie. h1,h2,h3,h4,h5)
+    2) order of preference for SEO (ie. h1>h2>h3>...>h6)
+    Ex: 
+    <h1>h1 Heading</h1>
+    <h2>h2 Heading</h2> -->
+
+    <!-- Paragraph: (ie. <p>Content</p>)[Different types of Formattting]
+    1) lines breaks and extra spaces are ignored by <p></p> tag
+    2) line breaks can be added using <br> tag
+    3) for adding specific part (ie. part with exra spaces) as it is we can usepreformatted tag (ie. <pre>Cont   ent</pre>). 
+    By default font of <p></p> tag and <pre></pre> tag are different.
+    4) <b>element</b> tag is used to BOLD element.
+    <strong>element</strong> tag also can used to BOLD text although difference isthat strong tag considers text as strong importance.
+    Hence strong tag is better from SEO point of veiw for important content.
+    5) <i>element</i> tag is used to ITALIC element.
+    <em>element</em>  tag also can used to ITALIC text although difference is thatem tag considers text as an emphasis, using verbal stress.
+    Hence em tag is better from SEO point of veiw for emphasis on a part ofcontent.
+    6) <u>element</u> tag is used to UNDERLINE element.
+    7) <small>element</small> tag is used to make an element smaller.
+    8) <mark>element</mark> tag is used for high-lighting element(by default -Yellow Color).
+    9) <del>element</del> tag is used to delete element.(ie. line is strikedthrough the text)
+    10) <ins>element</ins> tag denotes denotes an element which has been insertedin document.
+    Although <u></u> tag and <ins></ins> tag may have same results. But both havedifferent applications.
+    11) <sub>element</sub> tag used to subscript an element. 
+    12) <sup>element</sup> tag used to superscript an element. 
+    13) <hr> tag creates a horizontal rule
+    14) <q>element</q> tag is used to insert quotation marks around the element.
+    15) <blockquote cite="web_address">element</blockquote> tag specifies asection that is quoted from another source. doesn't insert quotation marks.
+    cite attribute is used to mention the web address of the element.
+    16) <abbr title="description">Abbreviation_Element</abbr> tag defines anabbreviation and title attribute shows description of element when we hoverover Abbreviation_Element.
+    17) <address>element</address>  tag defines the contact information for theauthor of a document.(by default - <br>element(ITALIC)<br>)
+    18) <cite>element</cite> tag defines the title of a creative work (i.e book,poem, song etc) (by default - ITALIC) -->
+
+    <!-- Links: Anchor tag (<a></a>) creates a hyperlink to connect one page to
+    another. href attribute specifies the URL of the page the link goes to
+    <a href="web_address">Read more</a>
+    local id in href attribute takes us to content of local id.
+    <a href="#id_local">Read more</a>
+    taget atribute is used for opening link in new tab
+    <a href="web_address" target="_blank">Read more</a>
+    title atribute is shown when we hover around the anchor tag
+    <a href="web_address" target="_blank" title="Go to webpage">Read more</a>
+    for emails we use mailto: in href attribute[SEO]
+    <a href="mailto:email@website.com?subject=subject_of _email">email@website.com</a> -->
+    
+    <!-- Image tag:
+    <img src="local_address_image" alt="repesents image till its loaded/shown[SEO]" width="Sizein_px" height="Size in _px"> -->
+
+    <!-- Marquee tag:
+    <marquee behavior="" direction="right">This is moving text</marquee> -->
+
+    <!-- Lists:
+    1) Ordered Lists:
+    <ol></ol> ordered list tag, <li></li> list element
+    start attribute defines start of the list (by default - 1)
+    type attribute defines the type of bullets of ordered list
+    <ol type="a">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ol>
+    2) Unordered Lists
+    <ul></ul> unordered list tag, <li></li> list element
+    type attribute defines the type of bullets of unordered list
+    <ul type="square">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    3) Description Lists(Eg: Dictionary)
+    <dl></dl> description list tag, <dt></dt> term description tag, <dd></dd> description tag
+    <dl>
+        <dt>Term1</dt>
+            <dd>Description1</dd>
+        <dt>Term2</dt>
+            <dd>Description2</dd>
+        <dt>Term3</dt>
+            <dd>Description3</dd>
+    </dl> -->
+
+    <!-- Table:
+    <table></table> table tag
+    <tr></tr> table row tag, <th></th> table heading tag, <td></td> table data tag.
+    1) table heading/data can be data, image, link.
+    2) colspan attribute is used to merge columns.
+    3) rowspan attribute is used to merge rows.
+    4) <caption></caption> caption tag is used to give table a heading.
+    5) <thead></thead> table header tag is used for for table headings.
+    6) <tbody></tbody> table body tag is used for for table body.
+    5) <tfoot></tfoot> table footer tag is used for for table footings.(Rarely Used)
+    6) for nested table we need to add a table in <td></td> table data tag.
+
+    <table border="1px">
+        <caption>Table</caption>
+        <thead>
+            <tr>
+                <th colspan="2">column1</th>
+                <th>column2</th>
+                <th>column3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>row1</th>
+                <td rowspan="3">data1</td> 
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+            <tr>
+                <th>row2</th>
+                <td>
+                    <table border="1px">
+                        <thead>
+                            <tr>
+                                <th>head1</th>
+                                <th>head2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>d1</td>
+                                <td>d2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>data4</td>
+                
+            </tr>
+            <tr>
+                <th>row3</th>
+                <td>data5</td>
+                <td>data6</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">column1</th>
+                <th>column2</th>
+                <th>column3</th>
+            </tr>
+        </tfoot>
+    </table> -->
+
+    <!-- Structure Elements:
+    I) div : (Block Element)
+    1) The <div> tag defines a division or a section in an HTML document and is used as a container for HTML elements.
+    2) div is a block-level element always starts on a new line and takes up the full width available.
+    3) Examples of block-level elements in HTML: -->
+    <!-- <address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer>
+    <form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video></video> -->
+    
+    <!-- <div style="border: 1px solid red;">Random Text</div>
+    <div style="border: 1px solid red;">Random Text Advances</div> -->
+
+    <!-- II) span : (Inline Element)
+    1) The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+    2) An inline element does not start on a new line and only takes up as much width as necessary.
+    3) Examples of inline elements in HTML: -->
+    <!-- <a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object>
+    <output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var> -->
+
+    <!-- <span style="border: 1px solid red;">Random Text</span>
+    <span style="border: 1px solid red;">Random Text Advanced</span> -->
+ 
+    <!-- iframe tag:
+    1) inline frame tag is used to embed another document within the current HTML document.
+    2) src attribute is used for the address of the another website
+    3) height, width, frameborder attribute is used to format the view of the frame
+    <iframe src="https://www.youtube.com" height="hpx" width="wpx" frameborder="10"></iframe> -->
+
+    <!-- Embed Audio:
+    1) mp3 (type = mpeg) is universal supported audio format.
+    2) <audio></audio> tag is used to embed sound content.
+    3) control attribute offers users to control audio playback etc.
+    4) <source> tag is used inside <audio></audio> tag for adding audio from different sources.
+    5) src attribute is used for storing address of audio source.
+    6) type attribute is used to specify the file format of audio source. 
+    7) if browser does not support audio formats it will display message. 
+    
+    <audio controls >
+        <source src="/audio.mp3" type="audio/mpeg"> 
+        <source src="audio.ogg" type="audio/ogg"> 
+        message
+    </audio> -->
+
+
+    <!-- Embed Video:
+    1) mp4 (type = mp4) is universal supported video format.
+    2) <video></video> tag is used to embed video content.
+    3) control attribute offers users to control video playback etc.
+    4) autoplay attribute can be used to play the video automatically.
+    5) width and height attributes can be used to format size of video player.
+    6) <source> tag is used inside <video></video> tag for adding video from different sources.
+    7) src attribute is used for storing address of video source.
+    8) type attribute is used to specify the file format of video source. 
+    9) if browser does not support video formats it will display message. 
+    
+    <video controls autoplay muted width="1000" height="500" >
+        <source src="video.mp4" type="video/mp4"> 
+        <source src="video.ogg" type="video/ogg">
+        message
+    </video> -->
+
+    <!-- Embed PDF:
+    I) embed tag:
+    <embed> tag used src, height, width and type attributes.
+    <embed src="document.pdf" width="1415" height="700" type="application/pdf">
+
+    II) iframe tag:
+    <iframe></iframe> tag uses src, height and width attributes.
+    <iframe src="document.pdf" width="1415" height="700"></iframe>
+
+    III) object tag:
+    <object></object> tag uses data, height, width, ansd type attributes.
+    <object readonly data="document.pdf" width="1415" height="700" type="application/pdf"></object> -->
+ 
+    <!-- Embed YT Videos:
+    Copy embed from share!
+    <iframe width="700" height="375" src="https://www.youtube.com/embed/4RSq3SX12fA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+    <!-- Embed Google Maps:
+    Copy embed from share!
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15008.492822872822!2d75.36251142836674!3d19.8770187861334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba2ee439cf06d%3A0x1a509ba887dbdc37!2sProzone%20Mall!5e0!3m2!1sen!2sin!4v1632909695619!5m2!1sen!2sin" width="700" height="375" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+    <!-- HTML Entities (https://www.w3schools.com/html/html_entities.asp)
+    <div> -> No result
+    I) name ( &name; ):
+    &lt;div&gt;
+    II ) number ( &#number; ):
+    &#60;div&#62; -->
+
+    <!-- HTML Symbols (https://www.w3schools.com/html/html_symbols.asp)
+    I) name ( &name; )
+    &copy;
+    II) number ( &#number; )
+    &#169; -->
+
+    <!-- Emoji in HTML ( https://www.w3schools.com/html/html_emojis.asp )
+    number ( &#number )
+    &#128514; -->
+
+    <!-- Semantic Elements (Updated in HTML5):
+    1) semantic elements = elements with a meaning
+    2) A semantic element clearly describes its meaning to both browser and developer.
+    3) <form></form>, <table></table> and <article></article> are examples of semantic elements.
+    Non Semantic Elements:
+    <div></div> and <span></span> are examples of non semantic elements. -->
+
+    <!-- HTML Image Map:
+    1) The HTML <map> tag defines an image map. An image map is an image with clickable areas.
+    2) The areas are defined with one or more <area> tags.
+    3) The idea behind an image map is that you should be able to perform different actions depending on where in the image you click.
+    4) Online tools for image map generator can be used for this takes
+    because, taking out coordinated can be a tedious task.
+    Example: 
+    <img src="./img.JPG" alt="Error_image" usemap="#image">
+    <map name="image">
+        <area shape="rect" coords="34,44,270,350" href="https://www.amazon.in/s?k=laptops&ref=nb_sb_noss_2" target="_blank" alt="Error_laptop">
+        <area shape="rect" coords="290,172,333,250" href="https://www.amazon.in/s?k=mobile+phones&ref=nb_sb_noss_2" target="_blank" alt="Error_mobile">
+        <area shape="circle" coords="337,300,44" href="https://www.amazon.in/s?k=coffee+powder&crid=321LFWJ44UXUA&sprefix=coff%2Caps%2C311&ref=nb_sb_ss_ts-doa-p_3_4" target="_blank" alt="Error_coffee">
+    </map> -->
+
+    <!-- HTML Forms:
+    An HTML form is used to collect user input. 
+    by default type - text
+    by default method - GET
+    by default action - ""(i.e same page)
+
+    <form method="GET" action="submit.php">
+        <div>
+            Text: 
+            <input type="text"><br>
+        </div>
+        <div>
+            Search:
+            <input type="">
+        </div>
+        <div>
+            Color:
+            <input type="color"><br>
+        </div>
+        <div>
+            Date:
+            <input type="date"><br>
+        </div>
+        <div>
+            Email:
+            <input type="email"><br>
+        </div>
+        <div>
+            Hidden:
+            <input type="hidden" value="Delhi"><br>
+        </div>
+        <div>
+            Number:
+            <input type="number"><br>
+        </div>
+        <div>
+            Password:
+            <input type="password"><br>
+        </div>
+        <div>
+            Time:
+            <input type="time"><br>
+        </div>
+        <div>
+            URL:
+            <input type=""><br>
+        </div>
+        <div>
+            Range:
+            <input type="range" min="1000" max="10000"><br>
+        </div>
+        <div>
+            Button:
+            <input type="button">
+        </div>
+        <div>
+            Reset:
+            <input type="reset"><br>
+        </div>
+        <div>
+            Submit button:
+            <input type="submit" value="Submit Form"><br>
+            or
+            <input type="image" src= "./submit.jfif">
+        </div>
+    </form> -->
+
+    <!-- Form File Upload:
+    multiple attribute is used to upload multiple files.
+    <form enctype="multipart/form-data" method="GET" action="submit.php" >
+        File Upload:
+        <input type="file" multiple>
+    </form> -->
+
+    <!-- HTML Input attributes (https://www.w3schools.com/html/html_form_attributes.asp):
+    1) The input value attribute specifies an initial value for an input field
+    2) The input readonly attribute specifies that an input field is read-only.
+    3) The input disabled attribute specifies that an input field should be disabled.(like delete attribute in paragraph)
+    4) The input size attribute specifies the visible width, in characters, of an input field.( default valve - 20)
+    5) The input maxlength attribute specifies the maximum number of characters allowed in an input field
+    6) The input min and max attributes specify the minimum and maximum values for an input field.
+    7) The input multiple attribute specifies that the user is allowed to enter more than one value in an input field.
+    8) The input pattern attribute specifies a regular expression that the input field's value is checked against, when the form is submitted. (Saves from invalid input)
+    9) The input placeholder attribute specifies a short hint(i.e faint sample valve) that describes the expected value of an input field.
+    10) The input required attribute specifies that an input field must be filled out before submitting the form.( Compulsion )
+    11) The input step attribute specifies the jump size of next when incremented.( by default - statrs from 0)
+    12) The input autofocus attribute specifies that an input field should automatically get focus when the page loads.
+    13) The input height and width attributes specify the height and width of an <input type="image"> element.
+    14) The input list attribute refers to a <datalist> element that contains pre-defined options for an <input> element.
+    15) The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off.(by default - on)
+    16) The name attribute specifies the name of an <input> element which is used to reference elements in a backend. -->
+
+    <!-- HTML Text Area:
+    here instead of valve attribute we can simply insert content between the tags.
+    <form >
+        <textarea name="text_area" id="ta_id" cols="40" rows="10" placeholder="Textarea">Valve</textarea> 
+    </form> -->
+
+    <!-- HTML Form Select
+    1) selected attribute specifies that an option should be pre-selected when the page loads.
+    2) The size attribute specifies the number of visible options in a drop-down list.
+    3) The multiple attribute specifies that multiple options can be selected at once.
+    <form  method="GET" action="submit.php" autocomplete="off">
+        <div>
+            <label for="id"></label>
+            <select name="name" id="id">
+                <optgroup label="Sites">
+                    <option value="google">Google</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="yahoo">Yahoo</option>
+                    <option value="hotmail">Hotmail</option>
+                </optgroup>
+                <optgroup label="Cars">
+                    <option value="audi">Audi</option>                    
+                    <option value="bmw">BMW</option>                    
+                    <option value="mercedes">Mercedes</option>                    
+                    <option value="tata">Tata</option>                    
+                </optgroup>
+            </select>
+            <input type="submit">
+        </div>
+    </form> -->
+
+    <!-- HTML Form Datalist:
+    <form  method="GET" action="submit.php" autocomplete="off">
+        <div>
+            <label for="cars">Car search: </label>
+            <input type="text" list="carlist" placeholder="Search Car" name="Cars" id="cars">
+            <datalist id="carlist">
+                <option value="Tata">
+                <option value="BMW">
+                <option value="Audi">
+                <option value="Mercedes">
+            </datalist>
+            <input type="submit" value="Go">
+        </div>
+    </form> -->
+
+    <!-- HTML Form <select></select> VS <datalist></datalist>
+    In <select> tag user have to select one of the given options (Compulsion).
+    Whereas using <datalist> tag user could input option that is not present in the given options.
+    IMP) <label for="id"></label> The <label> tag defines a label for several elements[SEO]
+    for attribute must be equal to the id attribute of the related element to bind them together.
+    Example: 
+    I) Select tag
+    <form  method="GET" action="submit.php" autocomplete="off">
+        <div>
+            <label for="id">Choose a Website:</label>
+            <select name="name" id="id">
+                <option value="google">Google</option>
+                <option value="facebook">Facebook</option>
+                <option value="youtube" selected>YouTube</option>
+                <option value="yahoo">Yahoo</option>
+                <option value="hotmail">Hotmail</option>
+            </select>
+            <input type="submit">
+        </div>
+    </form>
+    II) Datalist tag
+    <form  method="GET" action="submit.php" autocomplete="off">
+        <div>
+            <label for="id">Choose a Website: </label>
+            <input list="list_name" name="name" id="id">
+            <datalist id="list_name">
+                <option value="Google">
+                <option value="Facebook">
+                <option value="Youtube">
+                <option value="Yahoo">
+                <option value="Hotmail">
+            </datalist>
+            <input type="submit">
+        </div>
+    </form> -->
+
+    <!-- HTML Form Radio button:
+    1) Only one radio button in a group can be selected at the same time.
+    2) The radio group must have share the same name (the value of the name attribute) to be treated as a group.
+    3) The value attribute defines the unique value associated with each radio button. (used at backend)
+    4) Always add the <label> tag for best accessibility practices!
+    5) The checked attribute specifies that an <input> element should be pre-selected (checked) when the page loads.
+
+    <form method="GET" action="submit.php">
+        <div>
+            <label for="gender">Gender:
+                <label for="male">
+                    <input type="radio" value="Male" name="gender" id="male" checked >Male    
+                </label>
+                <label for="female">
+                    <input type="radio" value="Female" name="gender" id="female">Female    
+                </label>
+                <label for="other">
+                    <input type="radio" value="Other" name="gender" id="other">Other    
+                </label>
+            </label>    
+        </div>
+    </form> -->
+
+    <!-- HTML Form Checkbox:
+    1) Checkboxes are used to let a user select one or more options of a limited number of choices.
+    2) Always add the <label> tag for best accessibility practices!
+    <form method="GET" action="submit.php">
+        <div>
+            Languages:
+            <input type="checkbox" value="eng" name="English" id="english">
+            <label for="english">English</label>
+            <input type="checkbox" value="hin" name="Hindi" id="hindi">
+            <label for="hindi">Hindi</label>
+            <input type="checkbox" value="mar" name="Marathi" id="marathi">
+            <label for="marathi">Marathi</label>
+        </div>
+    </form> -->
+
+    <!-- Fieldset, Legend and Label tag:
+    1) The <label> tag represents a caption for an item in a user interface.
+    2) SEO, Screen reader and User friendly tag
+    3) The <fieldset> tag is used to group related elements in a form as it draws a box around the related elements.
+    4) The <legend> tag is used to define a caption for the <fieldset> element.
+    5) Instead of using div blocks in forms we should use feildset & legend blocks. 
+
+    <form method="GET" action="submit.php">
+        <div>
+            <label>
+                First Name: 
+                <input type="text" name="first_name">
+            </label>
+            OR
+            <label for="fname">First Name:</label>
+            <input type="text" name="first_name" id="fname">
+            
+            <input type="submit">
+        </div>
+    </form>
+
+    <form  method="GET" action="submit.php">
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label>
+                First Name:
+                <input type="text" name="first_name">
+            </label>
+            <label>
+                Last Name:
+                <input type="text" name="last_name">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Other Information</legend>
+            <label>
+                Address:
+                <input type="text" name="address">
+            </label>
+            <label>
+                Mobile no.:
+                <input type="text" name="mobile_no">
+            </label>
+        </fieldset>
+        <fieldset>
+            <input type="submit">
+        </fieldset>
+    </form> -->
+  </body>
+</html>

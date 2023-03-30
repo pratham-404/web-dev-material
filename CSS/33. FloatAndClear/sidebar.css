@@ -1,0 +1,22 @@
+#content{
+    width: 70%;
+    height: 200px;
+    color: aqua;
+    background-color: darkblue;
+    float: left;
+}
+
+#sidebar{
+    width: 30%;
+    height: 150px;
+    color: darkblue;
+    background-color: aqua;
+    float: left;
+}
+
+#footer{ 
+    color: white;
+    background-color: black;
+    display: block;
+    clear: left;
+}

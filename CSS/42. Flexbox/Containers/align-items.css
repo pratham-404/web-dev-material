@@ -1,0 +1,39 @@
+.flex-container1 {
+    background-color: cadetblue;
+    display: flex;
+
+    /*By Default */
+    height: 300px;
+    align-items: stretch;
+}
+
+.flex-container2 {
+    background-color: cadetblue;
+    display: flex;
+
+    height: 300px;
+    align-items: flex-start;
+}
+
+.flex-container3 {
+    background-color: cadetblue;
+    display: flex;
+
+    height: 300px;
+    align-items: flex-end;
+}
+
+.flex-container4 {
+    background-color: cadetblue;
+    display: flex;
+
+    height: 300px;
+    align-items: center;
+}
+
+.flex-child {
+    background-color: burlywood;
+    margin: 20px;
+    padding: 10px;
+    width: 100px;
+}

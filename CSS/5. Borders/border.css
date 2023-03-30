@@ -1,0 +1,73 @@
+#border_style{
+    border-style: solid; /*solid all 4 sides*/
+    border-style: solid dashed; /*solid(top & bottom) and dashed(left & right)*/
+    border-style: solid dashed double; /*(solid-top, dashed(right & left), groove-bottom)*/
+    border-style: solid dashed double groove; /*(solid-top, dashed-right, double-bottom, groove-left)[Clockwise]*/
+}
+#border_width{
+    border-style: solid;
+    border-width: 5px; /*5px all 4 sides*/
+    border-width: 5px 10px; /*5px(top & bottom) and 10px(left & right)*/
+    border-width: 5px 10px 15px; /*(5px-top, 10px(right & left), 15px-bottom)*/
+    border-width: 5px 10px 15px 20px; /*(5px-top, 10px-right, 15px-bottom, 20px-left)[Clockwise]*/
+}
+#border_color{
+    border-style: solid;
+    border-width: medium;
+    border-color: red; /*red all 4 sides*/
+    border-color: red green; /*red(top & bottom) and green(left & right)*/
+    border-color: red green blue; /*(red-top, green(right & left), blue-bottom)*/
+    border-color: red green blue yellow; /*(red-top, green-right, blue-bottom, yellow-left)[Clockwise]*/
+}
+#individual_sides{
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: red;
+    
+    border-right-width: 10px;
+    border-right-style: dashed;
+    border-right-color: green;
+    
+    border-bottom-width: 15px;
+    border-bottom-style: double;
+    border-bottom-color: blue;
+    
+    border-left-width: 20px;
+    border-left-style: groove;
+    border-left-color: yellow;
+}
+#border_short{
+    /* border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: red; */
+    border-top: 5px solid red;
+    
+    /* border-right-width: 10px;
+    border-right-style: dashed;
+    border-right-color: green; */
+    border-right: 10px dashed green;
+    
+    /* border-bottom-width: 15px;
+    border-bottom-style: double;
+    border-bottom-color: blue; */
+    border-bottom: 15px double blue;
+    
+    /* border-left-width: 20px;
+    border-left-style: groove;
+    border-left-color: yellow; */
+    border-left: 20px groove yellow;
+}
+#border_round{
+    border: medium solid grey;
+
+    border-radius: 5px;/*5px radius all 4 sides*/
+    border-radius: 5px 10px; /*5px(top-left & bottom-right) and 10px(top-right & bottom-left)*/
+    border-radius: 5px 10px 15px; /*5px(top-left), 10px(top-right & bottom-left), 15px(bottom-right)*/
+    border-radius: 5px 10px 15px 20px; /*5px(top-left), 10px(top-right), 15px(bottom-right), 20px(bottom-left)[Clockwise]*/
+
+    /* Shorthand property - Radius */
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 20px; */
+}

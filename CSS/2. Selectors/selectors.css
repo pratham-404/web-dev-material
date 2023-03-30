@@ -1,0 +1,59 @@
+/* element Selector */
+p{
+    color:aquamarine;
+}
+
+
+/* id Selector */
+#p1{
+    color: red;
+}
+#p2{
+    color:green;
+}
+#p3{
+    color: blue;
+}
+
+
+/* class Selector */
+.brown-text{
+    color:brown;
+}
+
+/* Nesting id and class Selectors */
+#pic{
+    font-size: 25px;
+}
+.purple-text{
+    color: purple;
+}
+.italic{
+    font-style: italic;
+}
+
+/* Selector precedence */
+/* id vs class vs element */
+h3{
+    color: blue;
+}
+.classh3{
+    color:green;
+}
+#heading3{
+    color: red;
+}
+/* class vs element */
+h4{
+    color: blue;
+}
+.classh4{
+    color:green;
+}
+/* element */
+h5{
+    color: blue;
+}
+
+
+

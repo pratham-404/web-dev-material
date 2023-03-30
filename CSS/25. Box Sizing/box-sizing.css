@@ -1,0 +1,17 @@
+#before{
+    background-color: bisque;
+    height: 200px;
+    width: 500px;
+    border: 20px solid black;
+    padding: 30px;
+}
+
+#after{
+    background-color: bisque;
+    height: 200px;
+    width: 500px;
+    border: 20px solid black;
+    padding: 30px;
+    /* Box-Sizing (by default - content-box)*/
+    box-sizing: border-box;
+}

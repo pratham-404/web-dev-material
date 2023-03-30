@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Word Counter</title>
+    </head>
+    <body>
+        <label for="txt">Word Counter</label>
+        <br />
+        <textarea name="area" id="txt" cols="40" rows="20"></textarea>
+        <p id="w"></p>
+        <p id="c"></p>
+    </body>
+    <script>
+        document.getElementById("txt").addEventListener("input", function () {
+            let str = this.value;
+            let arr = str.split(" ");
+
+            let word = arr.filter(function (i) {
+                return i != "";
+            });
+
+            document.getElementById("w").innerHTML = `Words: ${word.length}`;
+            document.getElementById("c").innerHTML = `Characters: ${str.length}`;
+        });
+    </script>
+</html>

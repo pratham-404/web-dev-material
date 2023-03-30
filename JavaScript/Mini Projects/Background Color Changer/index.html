@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Background Color Changer</title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <button id="blue" style="height: 20px; width: 20px; border-radius: 50%; background-color: blue;"></button>
+                <button id="green" style="height: 20px; width: 20px; border-radius: 50%; background-color: green;"></button>
+                <button id="yellow" style="height: 20px; width: 20px; border-radius: 50%; background-color: yellow;"></button>
+            </div>
+
+            <div style="height: 500px; width: 1000px; border: 1px solid black; background-color: aqua">hello</div>
+        </div>
+    </body>
+
+    <script>
+        document.getElementById("blue").addEventListener("click", function () {
+            document.body.style.backgroundColor = "blue";
+        });
+        document.getElementById("green").addEventListener("click", function () {
+            document.body.style.backgroundColor = "green";
+        });
+        document.getElementById("yellow").addEventListener("click", function () {
+            document.body.style.backgroundColor = "yellow";
+        });
+    </script>
+</html>

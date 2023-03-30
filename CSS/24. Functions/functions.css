@@ -1,0 +1,23 @@
+:root{
+    --primary-color: bisque;
+    --button_color: rgba(129, 25, 199, 0.75);
+    --button_text_color: white;
+}
+
+#cal{
+    background-color: var(--primary-color);
+    height: 200px;
+    /* width: 70%; */
+    width: calc(100% - 200px);
+}
+a{
+    color: var(--button_text_color);
+    background-color: var(--button_color);
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}

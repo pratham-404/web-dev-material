@@ -1,0 +1,13 @@
+div {
+    column-count: 3;
+    column-gap: 50px;
+    /* column-rule-style: dotted;
+    column-rule-width: 5px;
+    column-rule-color: cadetblue; */
+    column-rule: 5px dotted cadetblue;
+    column-width: 200px;
+}
+
+h1 {
+    column-span: all;
+}

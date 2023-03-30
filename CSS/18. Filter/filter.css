@@ -1,0 +1,23 @@
+img{
+    height: 600px;
+    width: 600px;
+    margin: 25px;
+    border-radius: 50px;
+}
+#img1{
+    /* filter:blur(2px);
+    filter: brightness(150%);
+    filter: contrast(70%);
+    filter: drop-shadow(10px 10px 10px black);
+    filter: grayscale(80%);
+    filter: hue-rotate(90deg);
+    filter: invert(75%);
+    filter: opacity(80%);
+    filter: saturate(80%);
+    filter: sepia(90%); */
+
+    /* We can add multiple filter properties simultaneously */
+    filter: blur(2px) brightness(150%);
+
+
+}

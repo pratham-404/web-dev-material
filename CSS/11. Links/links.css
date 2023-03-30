@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+}
+
+/* Note: link and visited should be above hover */
+/* Note: active should be at the last(ie. after link, visited and hover) */
+
+a:link{
+    color: red;
+}
+a:visited{
+    color: orange;
+}
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: black;
+}

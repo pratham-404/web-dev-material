@@ -1,0 +1,54 @@
+#bgcolor{
+    background-color: blanchedalmond;
+}
+#bgimg{
+    background-image: url('Images/1.jpg');
+}
+#bgrep{
+    background-image: url('Images/1.jpg');
+    background-repeat: no-repeat;
+}
+#bgpos{
+    background-image: url('Images/1.jpg');
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
+    /* for different position valves refer bg-position_values.png */
+}
+#bgsize{
+    background-image: url('Images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* for different size valves refer bg-size_values.png */
+}
+#bgattach{
+    background-image: url('Images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* for different position valves refer bg-attachment_values.png */
+}
+#bgshort{
+    /* background-color: #0000ff;
+    background-image: url('img.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: center; */
+    /* above code can be represented by a single line of code written below */
+    background: #0000ff url('Images/1.jpg') repeat-x fixed center;
+}
+#multibg1{
+    background-image: url('Images/2.png');
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#multibg2{
+    background-color: yellow;
+    background-image: url('Images/3.png'),url('Images/4.png');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: contain;
+    /* background: url('Images/3.png') no-repeat top left , url('Images/4.png') no-repeat right bottom ;
+    background-color: yellow;
+    background-size: contain; */
+}   

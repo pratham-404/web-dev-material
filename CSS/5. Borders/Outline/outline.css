@@ -1,0 +1,26 @@
+div{
+    border: 1px solid black;
+}
+#outline_style{
+    outline-style: dotted; /*solid all 4 sides*/
+}
+#outline_width{
+    outline-style: dotted;
+    outline-width: 5px; /*5px all 4 sides*/
+}
+#outline_color{
+    outline-style: dotted;
+    outline-width: 5px;
+    outline-color: red; /*red all 4 sides*/
+}
+#outline_short{
+    /* outline-width: 5px;
+    outline-style: solid;
+    outline-color: red; */
+    outline: 5px dotted red;
+}
+#outline_offset{
+    outline: 5px dotted red;
+    outline-offset: 5px;/*5px offset all 4 sides*/
+}
+

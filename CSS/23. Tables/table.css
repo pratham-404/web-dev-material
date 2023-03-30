@@ -1,0 +1,57 @@
+table, th, td, caption{
+    /* border: 1px solid black; */
+    text-align: center;
+
+    /* caption does not get affected by vertical align */
+    vertical-align: middle;
+
+    /* Horizontal Divider */
+    border-bottom: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    height: 200px;
+    width: 400px;
+    /* border-spacing: 5px; */
+    /* empty-cells: hide; */
+
+    /* Table Layout (by default-auto) */
+    table-layout: auto;
+
+}
+
+caption{
+    height: 20px;
+    /* Table padding */
+    padding: 5px;
+    /* caption-side: top; (by default) */
+
+}
+
+th{
+    height: 30px;
+    /* Table padding */
+    padding: 10px;
+    background-color: burlywood;
+}
+
+td{
+    height: 25px;
+    /* Table padding */
+    padding: 5px;
+}
+
+/* Striped Table */
+tr:nth-child(odd){
+    background-color: bisque;
+}
+
+/* Hoverable Table */
+tr:hover{
+    background-color: gray;
+}
+
+
+
+

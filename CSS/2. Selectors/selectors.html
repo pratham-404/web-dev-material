@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <link rel="stylesheet" href="selectors.css">
+</head>
+<body>
+
+    <!-- element Selectors -->
+    <p>Paragraph</p>
+
+    <!-- id Selector -->
+    <p id="p1">Paragraph 1</p>
+    <p id="p2">Paragraph 2</p>
+    <p id="p3">Paragraph 3</p>
+
+    <!-- class Selector -->
+    <h1 class="brown-text">Heading 1</h1>
+    <h2 class="brown-text">Heading 2</h2>
+    <p class="brown-text">Paragraph 4</p>
+    <p class="brown-text">Paragraph 5</p>
+    <p class="brown-text">Paragraph 6</p>
+
+    <!-- Nesting id and class Selectors -->
+    <p id="pic" class="purple-text italic" >Paragraph 7</p>
+ 
+    <!-- Selector precedence -->
+    <!-- id vs class vs element -->
+    <h3 id="heading3" class="classh3">Heading 3</h3>
+    <!-- id wins -->
+    <!-- class vs element -->
+    <h4 class="classh4">Heading 4</h4>
+    <!-- class wins -->
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <!-- Order of Selector precedence: id > class > element.-->
+    
+</body>
+</html>

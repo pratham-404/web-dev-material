@@ -1,0 +1,20 @@
+p{
+    border: 1px solid red;
+    overflow: auto; /*IMP*/
+}
+
+img{
+    border: 1px solid black;
+    width: 100px;
+    height: auto;
+}
+
+#img1{
+    float: right;
+}
+
+#img2{
+    float: right;
+    clear: right;
+    /* clear: both; */
+}

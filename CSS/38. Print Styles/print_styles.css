@@ -1,0 +1,22 @@
+@media screen {
+    p {
+        font-size: 20px;
+    }
+    img {
+        border-radius: 10%;
+    }
+}
+
+@media print {
+    p {
+        font-size: 40px;
+    }
+    img {
+        border-radius: 100%;
+        /* centring an image */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}

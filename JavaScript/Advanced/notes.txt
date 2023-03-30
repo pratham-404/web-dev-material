@@ -1,0 +1,664 @@
+// ECMA Scipt: Standard adopted by javascript / version of JavaScript 
+// major updates were adopted while es6 edition
+
+// let & const keywords were added in es6
+// before es6 we used to declare variables using var keyword
+
+// const was added to store values that should not be updated
+const l = 0;
+console.log(l); //0
+// l = 1; // ERROR: Assignment to constant variable
+
+// difference between var & let:
+
+// 1. variable created using var keyword is stored as a property of global object(window)
+var p = 101;
+console.log(p);
+console.log(window.p); // property of window object
+
+// whereas variables created using let keyword are not properties of global object(window) 
+let m = 1;
+console.log(m);
+console.log(window.m); // undefined
+
+// 2. redeclaration of var does not give error but same of let gives error
+var k = 1;
+console.log(k);
+var k = 9;
+console.log(k);
+
+let j = 1;
+console.log(j);
+// let j = 9; // ERROR: Identifier j has already been declared
+
+// Default parameters in es6
+
+// function fun(str) {
+
+//     if (str == undefined) {
+//         console.log("No Input");
+//     }
+
+//     console.log(str);
+// }
+
+// here default paramaeter is set hence in absence of input value of default parameters is assigned to function parameters
+function fun(str = "No Input") {
+
+    console.log(str);
+}
+
+fun("Hello, World");
+fun(); // undefined
+
+// Rest parameters
+
+function sum(a,b) {
+    return a+b;
+}
+
+console.log(sum(2)); // NaN(not a number)
+console.log(sum(2,3));
+console.log(sum(2,3,4)); // retruns sum of first 2 parameters
+
+// function to accept any number of parameters and output desired result => REST parameters
+
+function add(...args) { // Rest parameters
+    // args is array of parameters passed
+    let sum = 0;
+    for (let i = 0; i < args.length; i++) {
+        sum += args[i];
+    }
+    return sum;
+}
+
+console.log(add(1));
+console.log(add(1,2));
+console.log(add(1,2,3,4));
+console.log(add(1,2,3,5,6));
+
+// Spread Operator
+
+// ... inside function parameters => Rest parameters
+// else Spread operator(used to spread iterable objects like arrays)
+
+let arr1 = [1, 2, 3];
+let arr2 = [5, 4, 6, ...arr1]; // Spread operator: copies all elements of arr1 to given position in arr2
+let arr3 = [...arr2, ...arr1]; // Adding 2 arrays
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+
+// for..of loop
+// used to iterate through iterable object with minimal syntax
+
+let arr = [2,3,1,4,5,2,1];
+
+for (let i of arr) {
+    console.log(i);
+}
+
+let str = "pratham"
+for (i of str) {
+    console.log(i);
+}
+
+// template literals
+
+let str1 = "hello world!";
+console.log(str1);
+
+let str2 = "hello \nworld!";
+console.log(str2);
+
+//using the template literals we get exactly the same output as that of input <assigned></assigned>
+let str3 = `hello 
+
+    world!`; // using backtick(`) => above tab key
+console.log(str3);
+
+let naam = "pratham";
+console.log("my name is " + naam + ".");
+console.log(`my name is ${naam}.`); // using template literals
+console.log(`my name is ${naam}.`); // using template literals
+
+// Array Destructuring
+
+// let book = ["One indian Girl", 300, 150];
+// let book = ["One indian Girl", , 300, 150]; // pages: undefined
+let book = ["One indian Girl", 300, 150, ["pratham", 2021]]; // pages: undefined
+
+// let name = book[0];
+// let pages = book[1];
+// let price = book[2];
+
+// let[name, pages, price] = book; // Array Destructuring
+// let [name, pages, price, publication] = book; // publication: undefined
+// let [name, pages=500, price, publication] = book; // default value assigned to pages
+let [name, pages=500, price, [publication, year]] = book; // default value assigned to pages
+
+console.log(name);
+console.log(pages);
+console.log(price);
+console.log(publication);
+console.log(year);
+
+
+function fun() {
+    return ["One Indian Girl", 2021];
+}
+
+// let arr = fun();
+// let naam = arr[0];
+// let yer = arr[1];
+
+let[naam, yer] = fun();
+
+console.log(`${naam} ${yer}`);
+
+// Object destructuring
+
+let book = {
+    name: "One Indian Girl",
+    page: 300,
+    price: 150,
+
+    publication: {
+        pname: "pratham",
+        year: 2021,
+    },
+};
+
+// let name = book.name;
+// let title = book.name;
+// let page = book.page;
+// let price = book.price;
+
+// let {name: title, page = 200, price} = book;
+let {name: title, page = 200, price, publication:{pname: pub, year}} = book;
+// renaming an object value can be done using :
+// default value can be set by =
+
+console.log(name);
+console.log(title);
+console.log(page);
+console.log(price);
+console.log(pub);
+console.log(year);
+
+// Modules in ES6
+ refer module.js, modules/user.js, modules/account.js
+
+// OOP's in Javascript
+// Don't repeat yourself(DRY)
+
+// 1. Object, 2. Class, 3. Inheritance
+// Class: Grouping of Objects
+// Inheritance: inheriting properties of different classes
+
+// procedural vs object-oriented
+// In Object Orientede Programming we group function & variable in a Block called Class
+
+//  Four Pillars of OOPS
+// 1. Encapsulation: Wrapping up data and member functions together into single unit
+// 2. Abstraction: process of showing only essential features and hide irrelevent info for user-friendly experience
+// 3. Inheritance: allow a class(sub-class) to aquire the properties & behaviour of class(super-class)
+// 4. Polymorphism: sub-class can define its unique behaviour and still share same functionalities/properties of parent/base class
+
+// Implementing object oriented programming before es6
+let person1 = {
+    firstname: "pratham",
+    "last name": "loya",
+    age: 19,
+
+    // methods inside object
+    fullname: function(){
+        return this.firstname + ' ' + this["last name"]
+    }
+};
+
+console.log(person1);
+
+// accessing object properties
+console.log(person1.firstname);
+// arraylike notations should be used to access properties that contain spaces
+console.log(person1["last name"]);
+
+// updating object properties
+person1.age = 20;
+console.log(person1.age);
+
+console.log(person1.fullname());
+
+// declaring obejcts using new Object()
+person2 = new Object();
+person2.firstname = "kunal"
+person2["last name"] = "loya"
+person2.age = 21
+
+// declaring object methods outside object
+person2.fullname = function () {
+    return this.firstname + " " + this["last name"];
+};
+
+console.log(person2);
+console.log(person2.fullname());
+
+// multiple objects before es6 were made using constructor function
+
+// contructor function (first letter capital[good practice])=> outline of object
+function Person(first, last, a) {
+    this.firstname = first;
+    this.lastname = last;
+    this.age = a;
+
+    // this.fullname = function () {
+    //     return this.firstname + " " + this.lastname;
+    // };
+}
+
+// use of prototying => declaing object methods outside the constructor method
+Person.prototype.fullname = function () {
+    return this.firstname + " " + this.lastname;
+};
+
+// IMP: 'new' keyword
+let person1 = new Person("pratham", "loya", 19);
+console.log(person1);
+console.log(person1.fullname());
+
+
+// prototyping & prototypal inheritance
+// 'prototype' object is an inbuilt property present in an JS object
+
+let person1 = {};
+console.log(person1);
+
+let person2 = {
+    name: "pratham",
+};
+console.log(person2);
+// hasOwnProperty() is one of the many methods that are inbuilt present in the prototype object
+console.log(person2.hasOwnProperty("name"));
+
+function Person(n) {
+    this.name = n;
+}
+
+let person3 = new Person("pratham");
+// prototype changing
+// now if we observe very closely the 'prototype' of the object when it is created by using constructor function contains
+// 1.Prototype of the object                                           2. default 'prototype' object(with inbuilt methods)
+console.log(person3);
+
+function Person(first, last) {
+    this.firstname = first;
+    this.lastname = last;
+
+    // this.fullname = function () {
+    //     return this.firstname + " " + this.lastname;
+    // };
+}
+
+let person1 = new Person("pratham", "loya");
+
+// all the properties are copied to object and the prototype function consists of constructor function & default prototype object
+// but if we notice carefully we observe that all functions of the object are copied to the object again and again from the constructor function and this is unnecessary because same functions are present in constructor function of object
+console.log(person1);
+
+// Solution: we add all the functions in the object prototype hence they are all connected to prototype instead of copying
+// hence properties are connected & functions are connected from object prototype
+Person.prototype.fullname = function () {
+    return this.firstname + " " + this.lastname;
+};
+
+// we can also store properties(mostly constants) into function prototypes
+Person.prototype.age = 19;
+let person2 = new Person("kunal","loya")
+console.log(person2);
+// here we observe that once a property set for prototype object it remains constant for all the classes
+console.log(person1.age);
+console.log(person2.age);
+
+// Inheritance using functional prototyping
+function Creature(ls) {
+    this.lifespan = ls;
+}
+
+Creature.prototype.breath = function () {
+    return "Breathing";
+};
+
+function Person(first, last, a) {
+    this.firstname = first;
+    this.lastname = last;
+    this.age = a;
+}
+
+Person.prototype.fullname = function () {
+    return this.firstname + " " + this.lastname;
+};
+
+// IMP(Inheritance using functional prototype chaining)
+// object(person) --> prototype(person) --> prototype(creature) --> prototype(default) --> NULL
+Person.prototype.__proto__ = Object.create(Creature.prototype);
+
+let person1 = new Person("pratham", "loya", 19);
+// functions of Creature class are inherited to Person class
+console.log(person1);
+console.log(person1.breath());
+console.log(person1.fullname());
+// because only prototype object of creature class is connected to Person class
+console.log(person1.lifespan);
+
+
+// Class & Object in es6
+// sugar coated version of constructor function
+
+class Person {
+    // 1. constructor Method
+    // constructor function is automatically called when an object of class is created
+    constructor(first, last, a) {
+        // console.log("Person Created");
+
+        // used to set properties of object
+        this.firstname = first;
+        this.lastname = last;
+        this.age = a;
+    }
+
+    // 2. Prototype Method
+    // functions are automatically stored in prototype object
+    fullname() {
+        return this.firstname + " " + this.lastname;
+    }
+
+    // 3. Static functions
+    // property of class
+    static joey() {
+        return "Hi, How u do'in ?";
+    }
+    // static property
+    static magic = 101;
+}
+
+let person1 = new Person("pratham", "loya", 19);
+
+console.log(person1);
+
+console.log(person1.fullname());
+console.log(person1.pro);
+
+// console.log(person1.joey());
+console.log(Person.joey());
+// console.log(person1.magic);
+console.log(Person.magic);
+
+class Employee {
+    constructor(n) {
+        this.name = n;
+    }
+
+    greet() {
+        return "Hola ";
+    }
+}
+
+// inherting employee class into manager class
+class Manager extends Employee {
+    constructor(n, d) {
+        // calling the parent class constructor using super()
+        super(n);
+        this.department = d;
+    }
+
+    greet() {
+        return "Bonjour ";
+    }
+
+    info() {
+        // accessing properties inherited from parent class(this.name)
+        // accessing methods from parent class using super(super.greet())
+        // return super.greet() + this.name;
+        // accessing greet() function of current class
+        return this.greet() + this.name;
+    }
+}
+
+let mgr1 = new Manager("pratham", "hr");
+console.log(mgr1);
+
+console.log(mgr1.info());
+
+// accessing methods from parent class
+console.log(mgr1.greet());
+
+class Admin extends Manager{
+    // All propeties & methods of Manager & Employee classes
+}
+
+let adm1 = new Admin("kunal", "adm")
+
+console.log(adm1);
+adm1.greet()
+console.log(adm1.greet());
+console.log(adm1.info());
+
+// private properties & methods => can only be accessed inside class body
+class emp {
+    // private properties need to be initialized first & have '#' symbol at beginning
+    #name = "";
+    constructor(n) {
+        this.#name = n;
+    }
+
+    // private method
+    #getName() {
+        return this.#name;
+    }
+
+    fun() {
+        return this.#getName();
+    }
+}
+
+emp1 = new emp("pratham");
+console.log(emp1);
+// console.log(emp1.name);
+// console.log(emp1.getName());
+console.log(emp1.fun());
+
+
+// Mixin
+
+usefull = {
+    greet1() {
+        return "Hola";
+    },
+
+    greet2() {
+        return "Bonjour";
+    },
+};
+
+console.log(obj.greet1());
+console.log(obj.greet2());
+
+class user {
+    constructor(n) {
+        this.name = n;
+    }
+}
+
+let usr = new user("pratham");
+// console.log(usr.greet1());
+// console.log(usr.greet2());
+
+// now user class can access all properties & methods of 'obj' object
+// Object.assign(user.prototype, usefull);
+
+// console.log(usr.greet1());
+// console.log(usr.greet2());
+
+usefull2 = {
+    greet3() {
+        return "Namaste";
+    },
+
+    greet4() {
+        return "Hello";
+    },
+};
+
+class admin extends user {}
+
+let adm = new admin("kunal");
+Object.assign(admin.prototype, usefull);
+Object.assign(admin.prototype, usefull2);
+
+// hence to get properties/methods from multiple objects we can either 'extend' or 'mixin'[Object.assign]
+// but we can extend only once & mixin multiple times
+// extend
+console.log(adm.name);
+// mixin 'usefull'
+console.log(adm.greet1());
+console.log(adm.greet2());
+// mixin 'usefull2'
+console.log(adm.greet3());
+console.log(adm.greet4());
+
+// arrow function
+
+// normal function
+function sum(a, b) {
+    return a + b;
+}
+
+// corrsponding arrow function
+let sumA = (a,b) => {
+    return a+b;
+};
+
+let sumAA = (a, b) => a + b;
+
+console.log(sum(2,3));
+console.log(sumA(2,3));
+console.log(sumAA(2,3));
+
+// normal function
+function random() {
+    return Math.random();
+}
+
+// corresponding arrow function
+let randomA = () => Math.random();
+
+console.log(random());
+console.log(randomA());
+
+// normal function on click event
+document.addEventListener("click", function(){
+    console.log("Clicked normal");
+})
+
+// corresponding arrow function
+document.addEventListener("click", () => console.log("Clicked arrow"))
+
+// callback functions
+
+function greet1() {
+    console.log("Hemlo");
+}
+function greet2() {
+    console.log("Hola");
+}
+
+function sum(a, b, callback) {
+    console.log(a + b);
+    callback();
+}
+
+// upon reaching 'callback()' in function body the callback() is replaced by given function_name passed in parameters
+sum(4, 2, greet1);
+sum(4, 2, greet2);
+sum(4, 2, function () {
+    console.log("Bonjour");
+});
+
+
+// Map Function
+let arr = [2,3,4,5,11];
+// return an array containing 2*arr[i]
+
+// let ans = [];
+// for (let i = 0; i < arr.length; i++) {
+//     ans[i] = 2*arr[i];
+// }
+
+// using map function & anonymous functions
+// let ans = arr.map(function(val){
+//     return 2*val;
+// });
+
+// using map function & anonymous functions
+let ans = arr.map((val) => 2*val)
+console.log(ans); 
+
+// filter functions
+let arr = [2, 31, 4, 15, 11];
+
+// result number greater than 10
+// let ans = [];
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 10) {
+//         ans.push(arr[i]);
+//     }
+// }
+
+// using filter function
+let ans = arr.filter((i) => i > 10);
+console.log(ans);
+
+// cookies
+// can store user information for a better user-experience
+// simple key vaalue pairs
+document.cookie = "location=india";
+
+// defining expiry 
+document.cookie = "item=grape; expires=Sat, 23 July 2022 12:00:00 UTC";
+
+// updating cookie
+document.cookie = "item=pasta,maggi; expires=Sat, 23 July 2022 12:00:00 UTC";
+
+// accessing via string
+console.log(document.cookie);
+
+// deleting cookie(change expiry to past)
+document.cookie = "item=pasta,maggi; expires=Sat, 23 July 2002 12:00:00 UTC";
+console.log(document.cookie);
+
+// Web Storage(Local Storage & Session Storage)
+// added after the HTML5 release
+
+// local storage
+// setter
+localStorage.setItem('Firstname', 'pratham');
+
+//getter
+console.log(localStorage.getItem('Firstname'));
+
+//delete
+console.log(localStorage.removeItem('Firstname'));
+
+// similarly, session storage
+// setter
+sessionStorage.setItem('Location', 'Aurangabad');
+
+//getter
+console.log(sessionStorage.getItem('Location'));
+
+//delete
+console.log(sessionStorage.removeItem('Location'));
+
+
+

@@ -1,0 +1,38 @@
+#one{
+    height: 100px;
+    width: 100px;
+    color: blue;
+    border: 1px solid red;
+    display: block;
+}
+#two{
+    height: 100px;
+    width: 100px;
+    color: blue;
+    border: 1px solid red;
+    display: inline-block;
+}
+#three{
+    height: 100px;
+    width: 100px;
+    color: blue;
+    border: 1px solid red;
+    display: inline;
+}
+
+#four{
+    height: 100px;
+    width: 100px;
+    color: blue;
+    border: 1px solid red;
+    display: none;
+}
+
+#five{
+    height: 100px;
+    width: 100px;
+    color: blue;
+    border: 1px solid red;
+    /* by default - display: block; */
+    visibility: hidden;
+}

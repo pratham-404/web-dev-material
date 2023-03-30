@@ -1,0 +1,34 @@
+.flex-container1{
+    background-color: cadetblue;
+    display: flex;
+
+    /*By Default */
+    flex-direction: row; 
+}
+
+.flex-container2{
+    background-color: cadetblue;
+    display: flex;
+
+    flex-direction: row-reverse;
+}
+
+.flex-container3{
+    background-color: cadetblue;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.flex-container4{
+    background-color: cadetblue;
+    display: flex;
+
+    flex-direction: column-reverse;
+}
+
+.flex-child{
+    background-color: burlywood;
+    margin: 20px;
+    padding: 10px;
+}

@@ -1,0 +1,16 @@
+
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+    background-color: rgb(55, 43, 139);
+    list-style-type: none;
+    overflow: hidden; /*IMP - Remember to add when using float*/
+}
+
+li{
+    color: antiquewhite;
+    padding: 10px 15px;
+    float: left;
+}

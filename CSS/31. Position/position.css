@@ -1,0 +1,56 @@
+#static,#relative,#absolute,#fixed{
+    border: 2px solid brown;
+    width: 50%;
+    padding: 20px;
+    margin: 100px;
+    background-color: bisque;
+}
+
+#s1, #s2, #s3, #r1, #r2, #r3, #a1, #a2, #a3, #f1, #f2, #f3{
+    height: 100px;
+    width: 100px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+#s1, #r1, #a1, #f1{
+    background-color: red;
+}
+
+/* static --> by default*/
+#s2{
+    background-color: green;
+    /* position: static; */
+}
+
+/* relative */
+#r2{
+    background-color: green;
+    position: relative;
+    left: 50px;
+}
+
+/* absoulute */
+#absolute{
+    position: relative; /*positioned parent*/
+}
+#a2{
+    background-color: green;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+/* fixed */
+#f2{
+    background-color: green;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    
+}
+
+#s3, #r3, #a3, #f3{
+    background-color: blue;
+}

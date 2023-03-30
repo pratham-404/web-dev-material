@@ -1,0 +1,69 @@
+/* type selector */
+h1 {
+    color: red;
+}
+
+/* id selector */
+#id1 {
+    font-size: larger;
+    color: green;
+}
+
+/* class selector */
+.class1 {
+    font-size: medium;
+    color: blue;
+}
+
+/* pseudo class */
+h2:hover {
+    color: aqua;
+}
+
+/* pseudo element */
+h3::first-letter {
+    color: blueviolet;
+}
+
+/* attribute selector */
+a[href="http//www.google.com"]
+{
+    font-size: 50px;
+    color: coral;
+}
+
+/* universal selector */
+* {
+    border: 1px solid black;
+}
+
+/* combinator selector*/
+/* Descendent combinatory (child at any stage)*/
+/* div li{
+    color: red;
+    font-size: 40px;
+} */
+
+/* Child combinatory (Direct stage)*/
+/* div>ul{
+    color: red;
+    font-size: 40px;
+} */
+
+/* Adjacent combinatory (right after siblings)*/
+/* div+p{
+    color: red;
+    font-size: 40px;
+} */
+
+/* General sibling combinatory (all sibling)*/
+/* div ~ p{
+    color: red;
+    font-size: 40px;
+} */
+
+/* and selector */
+h1,
+h2 {
+    text-decoration: line-through;
+}

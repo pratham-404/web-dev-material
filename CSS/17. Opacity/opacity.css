@@ -1,0 +1,29 @@
+p{
+    color: blanchedalmond;
+    background-color: brown;
+    height: 80px;
+    width: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 20px;
+}
+p:hover{
+    opacity: 0.75;
+}
+#tbox{
+    opacity: 0.5;
+}
+
+img{
+    background-color: black;
+    height: 300px;
+    border-radius: 35px;
+    margin: 25px;
+}
+img:hover{
+    opacity: 0.75;
+}
+#timg{
+    opacity: 0.5;
+}

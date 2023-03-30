@@ -1,0 +1,43 @@
+/* SYNTAX:  */
+/* selector:pseudo-class{
+
+} */
+
+/* refer Links folder for pseudo classes of anchor tags. */
+
+/* hover */
+h1{
+    border: 1px solid black;
+    height: 40px;
+    width: 120px;
+}
+h1:hover{
+    background-color: chartreuse;
+    color: brown;
+}
+
+/* nth child */
+li:first-child{
+    color: red;
+}
+li:last-child{
+    color: blue;
+}
+li:nth-child(3){
+    color: green;
+}
+li:nth-child(even){
+    color: chartreuse;
+}
+li:nth-child(5n){
+    color: aqua;
+}
+li:nth-last-child(){
+    color: blueviolet;
+} 
+
+/* focus */
+input:focus{
+    border: 2px solid aquamarine;
+    outline: 2px solid cadetblue;
+}

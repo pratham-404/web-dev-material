@@ -1,0 +1,9 @@
+#box1{
+    height: 100px;
+    width: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 5px;
+    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+    box-shadow: 5px 10px 2px 4px aquamarine, 10px 20px 4px 8px aqua,15px 30px 6px 12px darkcyan, 5px 10px 2px 4px darkseagreen inset;
+}

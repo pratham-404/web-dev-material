@@ -1,0 +1,76 @@
+/* Absolute Units */
+
+/* cm */
+#cm{
+    border: 1cm solid black;
+}
+/* mm */
+#mm{
+    border: 1mm solid black;
+}
+/* in */
+#in{
+    border: 1in solid black;
+}
+/* px */
+#px{
+    border: 1px solid black;
+}
+/* pt */
+#pt{
+    border: 1pt solid black;
+}
+/* pc */
+#pc{
+    border: 1pc solid black;
+}
+
+
+/* Relative Units */
+
+/* em */
+#parent1{
+    border: 2px solid black;
+    font-size: 30px;
+}
+#child1{
+    border: 2px solid blue;
+    font-size: 0.75em; /* (0.75 * 30[parent]) = 20px */
+}   
+
+/* rem */
+html{
+    font-size: 40px;
+}
+#parent2{
+    border: 2px solid black;
+    font-size: 0.75rem;/* (0.75 * 40[html]) = 30px */
+}
+#child2{
+    border: 2px solid blue;
+    font-size: 0.5rem;/* (0.5 * 40[html]) = 20px */
+}  
+
+/* vh & vw */
+#parent3{
+    border: 2px solid black;
+    font-size: 2vw;
+    height: 50vh;
+    width: 50vw;
+}
+#child3{
+    border: 2px solid blue;
+    font-size: 25px;
+    height: 25vh;
+    width: 25vw;
+}
+
+/* % */
+#parent4{
+    border: 2px solid black;
+    width: 400px;
+}
+#child4{
+    border: 2px solid blue;
+    width: 50%;
+}

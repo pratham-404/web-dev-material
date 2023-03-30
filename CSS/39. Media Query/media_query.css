@@ -1,0 +1,48 @@
+#div1 {
+    width: 70%;
+    float: left;
+    background-color: bisque;
+}
+
+#div2 {
+    width: 30%;
+    float: left;
+    background-color: aquamarine;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+/* use https://www.webfx.com/tools/whats-my-browser-size/ for seeing where you messed up the responsiveness of the website */
+
+/* fot IPAD */
+@media screen and (max-width: 768px) {
+    #div1 {
+        width: 50%;
+    }
+    #div2 {
+        width: 50%;
+    }
+}
+
+/* for mobile-phone */
+@media screen and (max-width: 400px) {
+    #div1 {
+        width: 100%;
+    }
+    #div2 {
+        width: 100%;
+    }
+}
+
+/* for images and videos */
+img {
+    width: 100%;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}

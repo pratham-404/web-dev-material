@@ -1,0 +1,17 @@
+.flex-container {
+    background-color: cadetblue;
+    height: 400px;
+    display: flex;
+
+    /* For a perfect centre */
+    /* horizontal mid */
+    justify-content: center;
+    /* vertical mid */
+    align-items: center;
+}
+
+.flex-child {
+    margin: 20px;
+    padding: 30px;
+    background-color: burlywood;
+}

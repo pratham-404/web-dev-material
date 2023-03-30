@@ -1,0 +1,21 @@
+.inline-container {
+    background-color: cadetblue;
+}
+
+.inline-child {
+    background-color: burlywood;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.flex-container {
+    background-color: cadetblue;
+    display: flex;
+}
+
+.flex-child {
+    background-color: burlywood;
+    margin: 20px;
+    padding: 10px;
+}

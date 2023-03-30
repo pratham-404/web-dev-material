@@ -1,0 +1,10 @@
+#box1{
+    border: 2px solid black;
+    float: left;
+    height: 200px;
+    width: 200px;
+    padding: 50px;
+    margin: 25px
+}
+/* Total element width(354px) = width(200px) + left padding(50px) + right padding(50px) + left border(2px) + right border(2px) + left margin(25px) + right margin(25px) */
+/* Total element height(354px) = height(200px) + top padding(50px) + bottom padding(50px) + top border(2px) + bottom border(2px) + top margin(25px) + bottom margin(25px) */

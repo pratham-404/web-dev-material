@@ -1,0 +1,31 @@
+#div1 img{
+    border: 1px solid black;
+}
+#div2 img{
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    object-fit: contain;
+    object-position: left;
+}
+#div3 img{
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+}
+#div4 img{
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    /* by default */
+    object-fit: fill;
+}
+#div5 img{
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    object-fit: scale-down;
+    object-position: right;
+}

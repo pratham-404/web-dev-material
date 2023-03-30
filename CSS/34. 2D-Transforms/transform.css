@@ -1,0 +1,35 @@
+#wrapper{
+    padding: 20px;
+    margin: 100px;
+    background-color: red;
+    /* transform: matrix(scaleX(),skewX(),skewY(),scaleY(), translateX(), translateY());  */
+    transform: matrix(1,-0.1,0,1,0,0);
+}
+
+a{
+    color: antiquewhite;
+    text-decoration: none;
+    background-color: darkblue;
+    padding: 10px 20px; 
+
+    /* IMP --> 2D tranformations can only be applied on Block or Inline-Block*/
+    /* display: inline-block; */
+
+    /* transform: skew(20deg, 10deg); */
+    /* transform: skewX(20deg); */
+    /* transform: skewY(10deg); */
+
+    
+} 
+
+a:hover{
+    /* IMP --> 2D tranformations can only be applied on Block or Inline-Block*/
+    /* display: inline-block;  */
+
+    /* transform: translate(50px,50px); */
+    /* transform: rotate(20deg); */
+    /* transform-origin: 0% 100%; */
+    /* transform: scale(0.75, 3); */
+    /* transform: scaleX(0.75); */ 
+    /* transform: scaleY(3); */
+}

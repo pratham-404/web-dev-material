@@ -1,0 +1,4 @@
+1. rename folder with sr. no and topic name
+2. rename html & css files with topic name
+3. change Topic to topic name in html file
+4. change stylesheet link in html link tag

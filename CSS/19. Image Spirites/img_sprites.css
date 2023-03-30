@@ -1,0 +1,31 @@
+.icons{
+    height: 48px;
+    width: 52px;
+}
+a:hover{
+    filter: brightness(50%);
+}
+#ig{
+    height: 48px;
+    width: 52px;
+    background-image: url('sprites.jpg');
+}
+#fb{
+    height: 48px;
+    width: 52px;
+    background-image: url('sprites.jpg');
+    background-position: -52px 0px;
+}
+#tw{
+    height: 48px;
+    width: 52px;
+    background-image: url('sprites.jpg');
+    background-position: -104px 0px
+}
+#yt{
+    height: 48px;
+    width: 52px;
+    background-image: url('sprites.jpg');
+    background-position: -156px 0px
+}
+

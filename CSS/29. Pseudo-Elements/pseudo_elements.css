@@ -1,0 +1,34 @@
+/* SYNTAX: */
+/* selector::pseudo-element{
+
+} */
+
+/* first-letter & first-line */
+#para1::first-letter{
+    color: blue;
+}
+#para2::first-line{
+    color: blue;
+}
+
+/* before & after */
+h1::before{
+    /* content: "before "; */
+    content: url('bulb.png');
+}
+h1::after{
+    /* content: " after"; */
+    content: url('bulb.png');
+}
+
+/* selection */
+p::selection{
+    color: blue;
+    background-color: burlywood;
+}
+
+/* markers */
+/* The ::marker pseudo-element selects the markers of list items. */
+::marker { 
+    color: red;
+}

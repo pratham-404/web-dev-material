@@ -1,0 +1,662 @@
+#--> CSS Syntax
+p --> Selector ( HTML elements to style )
+color --> Property
+blue --> Valve
+remember to add semicolon after Valve --> Good Practice
+
+p {
+    color : blue;
+}
+
+p {
+    color : blue;
+    font-size: 15px;
+}
+
+#--> 1. Linking CSS
+
+If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. 
+
+What style will be used when there is more than one style specified for an HTML element?
+All the styles in a page will "cascade" into a new "virtual" style sheet by the following priority:
+    1) Inline style (inside an HTML element)
+    2) External and internal style sheets (in the head section)(Last read Style)
+    3) Browser default
+
+1) External CSS
+With an external style sheet, you can change the look of an entire website by changing just one file!
+
+Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section.
+
+An external style sheet must be saved with a .css extension.
+
+The external .css file should not contain any HTML tags.
+
+2) Internal CSS
+An external style sheet can be written in any text editor, and must be saved with a .css extension.
+
+The external .css file should not contain any HTML tags.
+
+3) Inline CSS
+An inline style may be used to apply a unique style for a single element.
+
+To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+
+Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.
+
+#--> 2. Selectors
+1. element Selector
+The element selector selects HTML elements based on the element name.
+
+2. id Selector
+The id selector uses the id attribute of an HTML element to select a specific element.
+Note: An id name cannot start with a number!
+
+The id of an element is "UNIQUE" within a page, so the id selector is used to select one unique element!
+
+To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+
+3. class Selectors
+The class selector selects HTML elements with a specific class attribute.
+
+To select elements with a specific class, write a period (.) character, followed by the class name.
+
+Order of Selector precedence: id > class > element.
+
+We can add multiple classes to an HTML element just by giving space and entering another class in the class attribute whereas id of an html element is unique.
+
+#--> 3 color
+1) Predefined color names
+    https://htmlcolorcodes.com/color-names/
+2) RGB (red, green, blue) [rgb(0,0,255)]
+    color value between 0 to 255.
+3) RGBA (red, green, blue, alpha) [rgba(255,255,0,0.5)]
+    alpha parameter is between 0.0(fully Transparent) to 1.0(fully Opaque)
+4) HEX ( #rrggbb )( red, green, blue) [#00ff00]
+    hexadecimal values between 00 and ff (same as decimal 0-255)
+5) HSL (hue, saturation, lightness) [hsl(0,100%,50%)]
+    Hue is degree on th color wheel from 0 to 360.
+    Saturation is a percentage valve(i.e 0% means a shade of grey, and 100% is full color).
+    Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+6) HSLA (hue, saturation, lightness, alpha) [hsl(0,100%,50%,0.5)]
+    alpha parameter is between 0.0(fully Transparent) to 1.0(fully Opaque)
+
+#--> 4 Background
+1) background-color
+The background-color property specifies the background color of an element.
+The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent
+Recommended -  Use RGBA valve of color instead of using  opacity property.
+
+2) background-image
+The background-image property specifies an image to use as the background of an element.
+By default, the image is repeated so it covers the entire element.
+Note: When using a background image, use an image that does not disturb the text.
+
+3) background-repeat
+By default, the background-image property repeats an image both horizontally and vertically.
+image is repeated only horizontally (background-repeat: repeat-x;)
+image is repeated only vertically (background-repeat: repeat-y;)
+showing image only once (background-repeat: no-repeat;)
+
+4) background-position
+The background-position property sets the starting position of a background image.
+for different position values refer (4. Background/bg-position_values.png)
+
+5) background-size
+The background-size property specifies the size of the background images. 
+for different position values refer (4. Background/bg-size_values.png)
+
+6) background-attachment
+The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.
+for different position values refer (4. Background/bg-attachment_values.png)
+
+7) background (shorthand property)
+To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+When using the shorthand property the order of the property values is:
+    1) background-color
+    2) background-image
+    3) background-repeat
+    4) background-attachment
+    5) background-position
+Eg: background: #0000ff[color] url('img.jpg')[image] repeat-x[repeat] fixed[attachment] center[position];
+
+8) multiple background
+Multiple background images for an element can be added using background-image property.
+The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
+Multiple background images can be specified using either the individual background properties (as above) or the background shorthand property.
+
+#--> 5. Borders
+1) border-style
+The border-style property specifies what kind of border to display.
+for different border-style values refer (5. Borders/border-style_values.png)
+
+2) border-width
+The border-width property specifies the width of the four borders.
+The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the pre-defined values: thin, medium, or thick.
+
+3) border-color
+The border-color property is used to set the color of the four borders.
+Note: If border-color is not set, it inherits the color of the element.
+
+4) individual-sides
+Individual Sides can assign valves for specifying each of the borders (top, right, bottom, and left):
+it works with border-style, border-width and border-color.
+
+5) border (shorthand property)
+To shorten the code, it is also possible to specify all the individual border properties in one property.
+The border property is a shorthand property for the following individual border properties(in order):
+    1) border-width
+    2) border-style (required)
+    3) border-color
+
+6) border-radius (rounding borders)
+The border-radius property is used to add rounded borders to an element.
+Shorthand property can be applied when working with rounded borders.
+
+7) Outline
+An outline is a line drawn outside the element's border.
+outline has the following  properties:
+    1) outline-style(quite similar as borders)
+    2) outline-color(quite similar as borders)
+    3) outline-width(quite similar as borders)
+    4) outline (shorthand property)(same as borders)
+    5) outline-offset
+        The outline-offset property adds space between an outline and the edge or border of an element.
+        The space between an element and its outline is transparent.
+
+
+#--> 6. Height & Width
+The height and width properties are used to set the height and width of an element.
+max(max-height & max-width) and min(min-height & min-width) are bare maximum/minimum height/width of an element.
+
+1) Height:
+    (height < min-height) --> height = min-height
+    (min-height < height < max-height) --> height = height
+    (height > max-height) --> height = max-height
+
+2) Width:
+    (width < min-width) --> width = min-width
+    (min-width < width < max-width) --> width = width
+    (width > max-width) --> width = max-width
+
+#--> 8) Padding
+Padding is used to create space around an element's content, inside of any defined borders.
+
+#--> 9) Margin
+Margins are used to create space around elements, outside of any defined borders.
+While using magring yo can give it negative valves in order to overlap with other elements but in case of padding valves cannot be negative.
+
+Margin auto: You can set the margin property to auto to horizontally center the element within its container.
+The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.
+
+Margin Collapse: Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+This does not happen on left and right margins! Only top and bottom margins!
+
+#--> 10) Box-Model
+Box-Model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+#--> 11) Text
+    1) text-color
+        --> color
+        --> background color
+    2) text-alignment
+        --> text-align: The text-align property is used to set the horizontal alignment of a text.
+            A text can be left or right aligned, centered, or justified.
+        --> text-direction: The direction and unicode-bidi properties can be used to change the text direction of an element.
+        --> vertical alignment: The vertical-align property sets the vertical alignment of an element.(apply property in img element's CSS i.e img{})
+    3) text-decoration:
+        --> text-decoration: The text-decoration property is used to set or remove decorations from text.
+            text-decoration can be overline, line-through or  underline.
+            Note: It is not recommended to underline text that is not a link, as this often confuses the reader.
+    4) text-transformation:
+        --> text-transform: The text-transform property is used to specify uppercase and lowercase letters in a text.
+            It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word.
+    5) text-spacing
+        --> text-indent: The text-indent property is used to specify the indentation of the first line of a text.
+        --> letter-spacing: The letter-spacing property is used to specify the space between the characters in a text.
+        --> line-height: The line-height property is used to specify the space between lines.
+        --> word-spacing: The word-spacing property is used to specify the space between the words in a text.
+        --> white-space: The white-space property specifies how white-space inside an element is handled.(used for wraping and unwraping the text)
+        --> word-wrap: The word-wrap property allows long words to be able to be broken and wrap onto the next line.
+    6) text-shadow
+        --> text-shadow: The text-shadow property adds shadow to text.
+        Syntax: text-shadow: (horizontal_shadow)[size] (vertical_shadow)[size] (blur_effect)[size] (color)[color]
+        you can add multiple shadows on a single text just use (,) and add another shadow's properties in the same text-shadow property.
+    7) text-orientation
+        --> writing-mode: The writing-mode property specifies whether lines of text are laid out horizontally or vertically.
+        --> text-orientation: The text-orientation CSS property sets the orientation of the text characters in a line. It only affects text in vertical mode (when writing-mode is not horizontal-tb). 
+
+#--> 12) Links
+    Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
+    In addition, links can be styled differently depending on what state they are in.
+    The four links states are:
+    1) :link - a normal, unvisited link
+    2) :visited - a link the user has visited
+    3) :hover - a link when the user mouses over it
+    4) :active - a link the moment it is clicked
+    When setting the style for several link states, there are some order rules:
+    Note: a:hover MUST come after a:link and a:visited
+    Note: a:active MUST come after a:hover
+
+#--> 13) Fonts
+Using a font that is easy to read is important. The font adds value to your text. 
+It is also important to choose the correct color and text size for the font.
+    1) font-size: The font-size property sets the size of the text.
+    The font-size value can be an absolute(px), or relative(em) size.
+        Absolute size[px]:
+            a) Sets the text to a specified size
+            b) Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+            c) Absolute size is useful when the physical size of the output is known
+        Relative size[em]:
+            a) Sets the size relative to surrounding elements
+            b) Allows a user to change the text size in browsers
+            Unfortunately, there is still a problem with older versions of Internet Explorer.
+            The text becomes larger than it should when made larger, and smaller than it should when made smaller.
+            The solution that works in all browsers, is to set a default font-size in percent for the <body> element.
+    Responsive Font Size: The text size can be set with a vw unit, which means the "viewport width".
+    That way the text size will follow the size of the browser window.
+
+    2) font-weight: The font-weight property specifies the weight of a font.
+    
+    3) font-style: The font-style property is mostly used to specify italic text.
+    
+    4) font-varient: The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+    In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+    
+    5) font-family: We use font-family property to specify the font of a text.
+    There is always a chance that a font is not found or is not installed properly.
+    This means that you should add a list of similar "backup fonts"(i.e fallback fonts) in the font-family property. If the first font does not work, the browser will try the next one, and the next one, and so on. Always end the list with a generic font family name.
+    
+    6) Google Fonts: Just add a special style sheet link in the <head> section and then refer to the font in the CSS.
+    Note: When specifying a font in CSS, always list at minimum one fallback font (to avoid unexpected behaviors).
+    So, also here you should add a generic font family (like serif or sans-serif) to the end of the list.
+    to use multiple Google fonts, just separate the font names with a pipe character (|),
+    Requesting multiple fonts may slow down your web pages! So be careful about that.
+    Google have also enabled different font effects that you can use.
+
+    Great font-pairings: https://www.w3schools.com/css/css_font_pairings.asp
+
+    7) Shorthand Font Property: To shorten the code, it is also possible to specify all the individual font properties in one property.
+    The font property is a shorthand property for (Order Specific):
+        1) font-style
+        2) font-variant
+        3) font-weight
+        4) font-size/line-height
+        5) font-family
+
+#--> 14) Units in CSS
+    We use length in width, height, margin, padding, font-size, etc.
+    There are two types of units in CSS:
+        a) Absolute (cm, mm, in, px[imp](1 inch = 96 px), pt(1 inch = 72 pt), pc(1 pc = 12 pt = 1/6 inch)):
+        b) Relative (em[imp], rem, vh, vw, %):
+            em - em is relative to the size of its direct parent.
+            rem - rem is only relative to root(html tag) size.
+            vh - 1% of veiw port height.
+            vw - 1% of veiw port width.
+            % - relative to parent.
+        Responsive Font Size: The text size can be set with a vw unit, which means the "viewport width".
+        That way the text size will follow the size of the browser window.
+ 
+#--> 14) Cursor: The cursor property specifies the mouse cursor to be displayed when pointing over an element.
+check out more at https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor 
+
+#--> 15) Important: The !important rule in CSS is used to add more importance to a property/value than normal.
+In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+Tip: It is good to know about the !important rule, you might see it in some CSS source code. However, do not use it unless you absolutely have to.
+
+#--> 16) Box-Shadow: The box-shadow property attaches one or more shadows to an element.
+box-shadow: none|h-offset(horizontal) v-offset(vertical) blur(blur-radius) spread(spread-radius) color |inset|initial|inherit;
+horizonta and vertical offsets can be negative.
+Note: To attach more than one shadow to an element, add a comma-separated list of shadows.
+
+#-->17) Opacity: The opacity property sets the opacity level for an element.
+The opacity-level describes the transparency-level, where 1 is not transparent at all, 0.5 is 50% see-through, and 0 is completely transparent.
+
+#--> 18) Filter: The filter property defines visual effects (like blur and saturation) to an element (often <img>).
+filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url(); 
+
+#--> 19) Image Sprites: An image sprite is a collection of images put into a single image.
+A web page with many images can take a long time to load and generates multiple server requests.
+Using image sprites will reduce the number of server requests and save bandwidth.
+
+#--> 20) Gradient: CSS gradients let you display smooth transitions between two or more specified colors.
+CSS defines two types of gradients:
+    a) Linear Gradient: To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. 
+    You can also set a starting point and a direction (or an angle) along with the gradient effect.
+    background-image: linear-gradient(direction, color-stop1, color-stop2, ...); 
+    To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can be a value from 0 to 1,
+    and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full color (no transparency).
+
+    b) Radial Gradient: To create a radial gradient you must also define at least two color stops.
+    background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+
+#--> 21) Overflow: The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+overflow-x specifies what to do with the left/right edges of the content.
+overflow-y specifies what to do with the top/bottom edges of the content.
+    Resize: The resize property defines if (and how) an element is resizable by the user.
+Note: The resize property does not apply to inline elements or to block elements where overflow="visible". So, make sure that overflow is set to "scroll", "auto", or "hidden".
+
+#--> 22) Lists:
+    The CSS list properties allow you to:
+    1) Set different list item markers for ordered lists.
+    2) Set different list item markers for unordered lists.
+    3) Set an image as the list item marker.
+    4) Add background colors to lists and list items.
+    List - Shorthand property: order of the property values are:
+        1) list-style-type
+        2) list-style-position
+        3) list-style-image 
+
+#--> 23) Tables: 
+    1) Table Borders: To specify table borders in CSS, use the border property.
+    2) Collapse Table Borders: The border-collapse property sets whether the table borders should be collapsed into a single border.
+    3) Border Spacing: Specifies the distance between the borders of adjacent cells
+    4) Caption Side: Specifies the placement of a table caption
+    5) Empty Cells: Specifies whether or not to display borders and background on empty cells in a table
+    6) Table Width and Height: The width and height of a table are defined by the width and height properties.
+    7) Horizontal Alignment: The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.
+        By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned.
+    8) Vertical Alignment: The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
+        By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
+    9) Table Padding: To control the space between the border and the content in a table, use the padding property on <td> and <th> elements.
+    10) Horizontal Dividers: Add the border-bottom property to <th> and <td> for horizontal dividers.
+    11) Hoverable Table: Use the :hover selector on <tr> to highlight table rows on mouse over.
+    12) Striped Tables: For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+    13) Table Color (Add background color to th and td)
+    14) Table Layout: The table-layout property defines the algorithm used to lay out table cells, rows, and columns.
+    table-layout: auto|fixed|initial|inherit;
+    Tip: The main benefit of table-layout: fixed; is that the table renders much faster. On large tables, users will not see any part of the table until the browser has rendered the whole table. So, if you use table-layout: fixed, users will see the top of the table while the browser loads and renders rest of the table. This gives the impression that the page loads a lot quicker!
+
+#--> 24) Function(): CSS functions are used as a value for various CSS properties.
+    for more functions check out 24. Functions/CSS_functions.
+
+#--> 25) Box-Sizing: By default, the width and height of an element is calculated like this.
+        width + padding + border = actual width of an element
+        height + padding + border = actual height of an element
+        This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+        The box-sizing property allows us to include the padding and border in an element's total width and height.
+        If you set box-sizing: border-box; on an element, padding and border are included in the width and height.
+
+#--> 26) Initial vs Inherit:
+        Initial: The initial keyword is used to set a CSS property to its default value.
+        Inherit: The inherit CSS keyword causes the element for which it is specified to take the computed value of the property from its parent element. 
+
+#--> 27) Object-fit: The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+        We see that the image is being squished to fit the container of resulting to destroy original aspect ratio.
+        Here is where the object-fit property comes in. The object-fit property can take one of the following values:
+            a) contain - The image keeps its aspect ratio, but is resized to fit within the given dimension.
+            b) cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit.
+            c) fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit.
+            d) scale-down - the image is scaled down to the smallest version of none or contain.
+
+#--> 28) Pseudo-classes: A pseudo-class is used to define a special state of an element.
+        IMP pseudo-classes:
+            a) anchor pseudo classes(link, visited, hover, active)
+            b) nth-child
+            c) focus
+        for more: https://www.w3schools.com/css/css_pseudo_classes.asp
+
+#--> 29) Pseudo-elements: A CSS pseudo-element is used to style specified parts of an element.
+        IMP pseudo-elements:
+            a) first-letter & first-line
+            b) before & after
+            c) selection
+            d) markers
+        for more: https://www.w3schools.com/css/css_pseudo_elements.asp
+
+#--> 30) Display: The display property specifies the display behavior (the type of rendering box) of an element.
+            a) block
+                i) element occur in new line.
+                ii) full width.
+                iii) height and width.
+                by default - div, p, h1, form, etc.
+            b) inline-block
+                i) element occur in same line.
+                ii) width is of size of content.
+                iii) height and width.
+            c) inline
+                i) element occur in same line.
+                ii) width is of size of content.
+                iii) neither height nor width.
+                by default - a, img, span, etc.
+            d) none
+         Visibility: The visibility property specifies whether or not an element is visible.
+         Hidden elements take up space on the page. Use the display property to both hide and remove an element from the document layout!
+
+#--> 31) Position: The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky).
+            order of priority due to overlapping => relative > absolute > fixed > static(by- default)
+            a) static (by default- static) --> Normal Flow
+            b) relative
+                i) top, bottom, left, right
+                ii) shifts relative to static position
+                iii) overlaps other blocks(i.e absolute, fixed, static) and is completely visible
+            c) absolute
+                i) top, bottom, left, right
+                ii) shifts relative to nearest positioned parent(i.e relative, fixed, absolute)
+                    if none are positioned then it will be relative to body
+                iii) overlaps other blocks(i.e fixed, static) and is completely visible
+            d) fixed
+                i) top, bottom, left, right
+                ii) shifts according to viewport and always visible(even when we scroll)
+            
+#--> 32) Layers: The z-index property specifies the stack order of an element.   
+        An element with greater stack order is always in front of an element with a lower stack order.
+        z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
+        higher the z-index value higher is their priority of visibility upon overlapping
+
+#--> 33) Float & Clear: float property specifies how an element should float (left, right, both, none).
+        IMP --> use overflow:auto in container when floating object gets out of the container.
+        clear property specifies what elements can float beside the cleared element and on which side.
+        NOTE --> clear can be used in both containers as well as the floated elements
+
+
+#--> 34) 2D Tranforms: transform property allows us to move, rotate, scale, and skew elements.
+        cannot be applied on inline elements(but could be applied on inline-block and block elements)
+            i) translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+            ii) rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+            iii) scale() method increases or decreases the size of an element (according to the parameters given for the width and height).
+            iv) scaleX() method increases or decreases the width of an element.
+            v) scaleY() method increases or decreases the height of an element.
+            vi) skewX() method skews an element along the X-axis by the given angle.
+            vii) skewY() method skews an element along the Y-axis by the given angle.
+            viii) skew() method skews an element along the X and Y-axis by the given angles.
+            ix) matrix() method combines all the 2D transform methods into one.
+                matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+                
+#--> 35) 3D Tranforms: transform property allows us to move, rotate, scale, and skew elements in 3D.
+            perspective() is important in order to achive 3D transformations
+            refer --> https://3dtransforms.desandro.com/perspective
+            i) rotate-3d(x,y,z,angle) method rotates an element about x,y,z axis at a given angle.
+            ii) translate(x,y,z) method translates an element from its current position to x,y,z axes respectively.
+
+#--> 36) Transitions: transitions allows you to change property values smoothly, over a given duration.
+            0) transition: [property] [duration] [timing-function] [delay], .... ;
+            i) transition-property: CSS property you want to add an effect to
+            ii) transition-duration: duration of the effect
+            iii) transition-delay: property specifies a delay (in seconds) for the transition effect.
+            iv) transition-timing-function: property specifies the speed curve of the transition effect.
+            The transition-timing-function property can have the following values:
+                i) ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+                ii) linear - specifies a transition effect with the same speed from start to end
+                iii) ease-in - specifies a transition effect with a slow start
+                iv) ease-out - specifies a transition effect with a slow end
+                v) ease-in-out - specifies a transition effect with a slow start and end
+                v) cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+#--> 37) Animations: An animation lets an element gradually change from one style to another.
+                    To use CSS animation, you must first specify some keyframes for the animation.
+                    When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+            i) animation-name: give the name of keyframe element to apply a certain animation
+            ii) animation-duration: defines how long an animation should take to complete.
+                If the animation-duration property is not specified, no animation will occur, because the default value is 0s
+            iii) animation-delay: specifies a delay for the start of an animation
+            iv) animation-iteration-count: property specifies the number of times an animation should run
+            v) animation-direction: property specifies whether an animation should be played forwards, backwards or in alternate cycles
+                i) normal
+                ii) reverse
+                iii) alternate -  The animation is played forwards first, then backwards
+                iv) alternate-reverse - The animation is played backwards first, then forwards
+            vi) animation-timing-function: similar to that of transitions
+
+#--> 38) Print Styles: we can use CSS to change the appearance of your web page when it's printed on a paper. 
+                       we can specify one font for the screen version and another for the print version.
+
+#--> 39) Media Query: Media queries can be used to check many things, such as:
+            i) width and height of the viewport
+            ii) width and height of the device
+            iii) orientation (is the tablet/phone in landscape or portrait mode?)
+            iv) resolution
+
+#--> 40) Selectors in CSS:
+        1) type selector
+            h1{
+                /* Some CSS Here */
+            }
+        2) ID selector
+            #id{
+                /* Some CSS Here */
+            }
+        3) class selector
+            .class{
+                /* Some CSS Here */
+            }
+        4) pseudo-class(:) / pseudo-element(::) selector
+            a:hover{
+                /* Some CSS Here */
+            }
+            a::first-line{
+                /* Some CSS Here */
+            }
+        5) attribute selector
+        generally used for taking password inputs and more..
+            a[href="www.some_website.com"]{
+                /* Some CSS Here*/
+            }
+        6) universal selector
+            *{
+                /* Some CSS Here*/
+            }
+        7) Combinator selector
+            i) Descendent combinatory (child at any stage)
+                .class h1{
+                    /* Some CSS Here*/
+                }
+            ii) Child combinatory (Direct stage)
+                .class > h1{
+                    /* Some CSS Here*/
+                }
+            iii) Adjacent combinatory (right after siblings)
+                .class + h1{
+                    /* Some CSS Here*/
+                }
+            iv) General sibling combinatory (all sibling)
+                .class ~ h1
+                    /* Some CSS Here*/
+                }
+        8) And selector
+            .class, h1{
+                /* Some CSS Here*/
+            }
+
+        There are four categories which define the specificity level of a selector:
+
+            i) Inline styles - Example: <h1 style="color: pink;">
+            ii) IDs - Example: #navbar
+            iii) Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+            iv) Elements and pseudo-elements - Example: h1, :before
+            There is one exception to this rule: if you use the !important rule, it will even override inline styles!
+
+        Contextual selectors(inline CSS) are more specific than a single element selector(External CSS file)
+        A class selector beats any number of element selectors  
+        The universal selector (*) and inherited values have a specificity of 0
+
+#--> 41) Multiple Columns in CSS: multi-column layout allows easy definition of multiple columns of text - just like in newspapers
+            i) column-count: specifies the number of columns an element should be divided into
+            ii) column-gap: specifies the gap between the columns
+            iii) column-rule-style: specifies the style of the rule between columns
+            iv) column-rule-width: specifies the width of the rule between columns
+            v) column-rule-color: specifies the color of the rule between columns
+            vi) column-width: specifies a suggested, optimal width for the columns.
+        
+#--> 42) Flexbox: The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning
+                  To start using the Flexbox model, you need to first define a flex container.
+        
+         Flex Container: The flex container becomes flexible by setting the display property to flex
+         The flex container properties are:
+                i) flex-direction: defines in which direction the container wants to stack the flex items
+                    i) row (default)
+                    ii) row-reverse
+                    iii) column
+                    iv) column-reverse
+                ii) flex-wrap: whether the flex items should wrap or not
+                    i) wrap
+                    ii) nowrap(default)
+                    iii) wrap-reverse
+                iii) flex-flow: shorthand property for setting both the flex-direction and flex-wrap properties
+                iv) justify-content: property is used to align the flex items
+                    i) centre
+                    ii) flex-start(default)
+                    iii) flex-end
+                    iv) space-around
+                    v) space-between
+                v) align-items: property is used to align the flex items
+                    i) centre
+                    ii) flex-start
+                    iii) flex-end
+                    iv) stretch(default)
+                vi) align-content: property is used to align the flex lines
+                    i) space-between
+                    ii) space-around
+                    iii) stretch(default)
+                    iv) centre
+                    v) flex-start
+                    vi) flex-end
+            For perfect centring use justify-content:center and align-items:centre
+            use veiwport height (i.e vh) inorder to keep block in centre vertically
+
+         Items: The direct child elements of a flex container automatically becomes flexible (flex) items.
+         The flex item properties are:
+            i) order: specifies the order of the flex items
+            ii) flex-grow: specifies how much a flex item will grow relative to the rest of the flex items
+            iii) flex-shrink: specifies how much a flex item will shrink relative to the rest of the flex items
+            iv) flex-basis: specifies the initial length of a flex item
+            v) flex: shorthand property for the flex-grow, flex-shrink, and flex-basis properties
+            vi) align-self: specifies the alignment for the selected item inside the flexible container
+                            It overrides the default alignment set by the container's align-items property.
+
+#--> 43) Grid: Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning
+               A grid layout consists of a parent element, with one or more child elements
+               An HTML element becomes a grid container when its display property is set to grid or inline-grid
+               Grid Columns: The vertical lines of grid items are called columns.
+               Grid Rows: The horizontal lines of grid items are called rows.
+               Grid Gaps: The spaces between each column/row are called gaps.
+                          we can adjust the gap size by using one of the following properties:
+                              i) grid-column-gap: property sets the gap between the columns
+                              ii) grid-row-gap: property sets the gap between the rows
+                              iii) grid-gap: shorthand property for the grid-row-gap and the grid-column-gap properties
+               Grid Lines: The lines between columns are called column lines and the lines between rows are called row lines.
+            
+               Containers:
+               grid-template-columns: defines the number of columns in your grid layout, and it can define the width of each column
+               grid-template-rows: is a property defines the height of each row
+               justify-content: property used to align the whole grid inside the container
+               align-content: property used to vertically align the whole grid inside the container.
+
+               Items:
+               grid-column: property defines on which column(s) to place an item
+               grid-column property is a shorthand property for the grid-column-start and the grid-column-end properties
+
+               grid-row: property defines on which row to place an item
+               grid-row property is a shorthand property for the grid-row-start and the grid-row-end properties
+
+               grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties
+        IMP--> grid-area property can also be used to assign names to grid items and named grid items can be referred to by the grid-template-areas property of the grid container
+
+
+
+
+Use W3C CSS validator (online tool) can be used to find any dicrepencies in the CSS code

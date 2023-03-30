@@ -1,0 +1,72 @@
+@keyframes changecolor {
+    0% {
+        background-color: #000000;
+    }
+    25% {
+        background-color: #0000ff;
+        width: 200px;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+    75% {
+        background-color: #ff0000;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+#animate {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    border: 1px solid black;
+
+    /* animation-name: changecolor;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite ;
+    animation-timing-function: ease-in-out; */
+
+    animation: changecolor 5s ease-in-out 1s infinite normal;
+}
+
+#animate1 {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    border: 1px solid black;
+
+    animation-name: changecolor;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+#animate2 {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    border: 1px solid black;
+
+    animation-name: changecolor;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#animate3 {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    border: 1px solid black;
+
+    animation-name: changecolor;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}

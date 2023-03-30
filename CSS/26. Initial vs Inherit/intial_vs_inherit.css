@@ -1,0 +1,14 @@
+#red{
+    color: red;
+}
+#green{
+    color: green;
+}
+/* initial */
+#initial{
+    color: initial;
+}
+/* inherit */
+#inherit{
+    color: inherit;
+}

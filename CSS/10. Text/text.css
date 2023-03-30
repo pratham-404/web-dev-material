@@ -1,0 +1,64 @@
+p{
+    width: 700px;
+    border: 1px solid black;
+}
+
+/* text-color */
+#tc{
+    color: brown;
+    /* background-color */
+    background-color: antiquewhite; 
+}
+
+/* text-alignment */
+#ta{
+    text-align: justify;
+    /* text-direction */
+    direction: ltr;
+}
+img{
+    border: 1px solid blue;
+    height: 50px;
+    width: 150px;
+    /* vertical alignment */
+    vertical-align: middle;
+}
+
+/* text-decoration */
+#td{
+    text-decoration: line-through;
+}
+
+/* text-transform */
+#tt{
+    text-transform: capitalize;
+}
+
+/* text-spacing */
+#tsp{
+    /* text-indent */
+    text-indent: 100px;
+    /* letter-spacing */
+    letter-spacing: 0.5px;
+    /* line-height */
+    line-height: 20px;
+    /* word-spacing */
+    word-spacing: 1px;
+    /* white-space */
+    white-space: pre;
+    /* word-wrap */
+    word-wrap: normal;
+}
+
+/* text-shadow */
+#tsh{
+    text-shadow: 2px 2px 4px greenyellow, 0px 0px 5px red;
+}
+
+/* text-orientation */
+#to{
+    /* writing mode */
+    writing-mode: vertical-lr;
+    /* text-orientation */
+    text-orientation: upright;
+}

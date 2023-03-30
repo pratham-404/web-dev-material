@@ -1,0 +1,51 @@
+body{
+    border: 5px dotted red;
+}
+.div{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#mar1{
+    margin: 10px; /*5px all 4 sides*/
+}
+#mar2{
+    margin: 10px 20px; /*5px(top & bottom) and 10px(left & right)*/
+}
+#mar3{
+    margin: 10px 20px 30px; /*(5px-top, 10px(right & left), 15px-bottom)*/
+}
+#mar4{
+    margin: 10px 20px 30px 40px; /*(5px-top, 10px-right, 15px-bottom, 20px-left)[Clockwise]*/ 
+}
+#mar5{
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    /* margin: 10px 20px 30px 40px; */
+}
+#mar6{
+    margin-top: -50px;/* margins can negative */
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    /* margin: -50px 20px 30px 40px; */
+}
+
+/* Margin: auto */
+#auto{
+    width: 500px;
+    margin: 20px auto;
+}
+
+/* Margin Collapse */
+/* margin-bottom [B] > margin top [T] → margin = margin-bottom [B] */
+/* margin-bottom [B] < margin top [T] → margin = margin-top [T] */
+#col1{
+    margin-bottom: 25px;
+}
+#col2{
+    margin-top: 50px;
+}

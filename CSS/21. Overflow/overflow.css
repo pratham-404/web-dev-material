@@ -1,0 +1,52 @@
+#visible{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: visible;
+}
+#hidden{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+#scroll{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: scroll;
+}
+#x_y{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#auto{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: auto;
+}
+#r_h{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: auto;
+    resize: horizontal;
+}
+#r_v{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: auto;
+    resize: vertical;
+}
+#r_b{
+    height: 100px;
+    width: 400px;
+    border: 2px solid black;
+    overflow: auto;
+    resize: both;
+}
