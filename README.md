@@ -14,3 +14,7 @@ The repository is organized into three directories:
 We welcome contributions to this repository. If you have any suggestions, feel free to submit a pull request.
 
 I hope you find this repository helpful in your web development journey! Happy coding!
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
